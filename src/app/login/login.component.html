@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <header class="header1">
+        <h1>Agro pesca jacaré</h1>
+        <nav class="navegation1">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page">
+        <form method="post" [formGoup]="angForm" class="formlogin"  (ngSubmit)="postdata" autocomplete="off">
+            <h1>Login</h1>
+            <p>Digite seus dados para fazer o login</p>
+            <!-- <progress value="load" max="100"></progress>  -->
+            <label for="email">E-mail</label>
+            <input type="email" name="email" formControlName="email" autocomplete="off" placeholder="Digite seu email" autofocus="true" />
+            <label for="password">senha</label>
+            <input type="password" name="password" formControlName="password" autocomplete="off" placeholder="Digite sua senha">
+            <a href="/">Esqueci minha senha</a>
+            <input type="submit" value="Login" class="button" />
+
+            <input onclick="location.href='register/register.component.html'" type="button" value="register"
+                class="button" />
+
+        </form>
+
+    </div>
+
+    <!-- <footer>
+    <p>&copy; Rapazeada de sistemas</p>
+  </footer> parte de baixo onde fica os contatos-->
+</body>
+
+</html>
